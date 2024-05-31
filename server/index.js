@@ -10,7 +10,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
+app.use('/',(req,res)=>{
+    res.send('hello world')
+} )
 app.use('/api/v1/', userRouter)
 
 app.listen(process.env.PORT, async () => {
