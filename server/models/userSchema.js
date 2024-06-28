@@ -45,5 +45,7 @@ const userSchema = sequelize.define("user", {
         type: DataTypes.FLOAT,
         allowNull: true,
     }
+},{
+    timestamps: false
 })
 module.exports = { userSchema }

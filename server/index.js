@@ -10,13 +10,15 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use('/',(req,res)=>{
-    res.send('hello world')
-} )
-app.use('/api/v1/', userRouter)
+// app.use('/',(req,res)=>{
+//     res.send('hello world')
+// } )
+app.use('/api/users', userRouter)
 
 app.listen(process.env.PORT, async () => {
 
 await ConnectionDb()
     console.log(` listening on ${process.env.PORT}`)
 })
+
+// https://mealgenius-arts.onrender.com/
